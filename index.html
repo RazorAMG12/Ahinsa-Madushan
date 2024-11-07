@@ -1,0 +1,165 @@
+ html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #111;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Login Form Styles */
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .login-box {
+        padding: 20px;
+        background-color: #222;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+    }
+
+    h2 {
+        color: #ff77a9;
+    }
+
+    input[type="text"], button {
+        padding: 10px;
+        margin: 10px 0;
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+    }
+
+    input[type="text"] {
+        background-color: #333;
+        color: #fff;
+    }
+
+    button {
+        background-color: #ff3366;
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    button:hover {
+        background-color: #ff5e85;
+    }
+
+    /* Heart Page Styles */
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(45deg, #fbc2eb, #a18cd1, #fad0c4, #ff9a9e);
+        background-size: 300% 300%;
+        animation: backgroundShift 8s ease infinite;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+    }
+
+    /* Keyframes for animated background gradient */
+    @keyframes backgroundShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* Infinity Symbol */
+    .infinity {
+        position: relative;
+        width: 250px;
+        height: 150px;
+        border: 5px solid #ff77a9;
+        border-radius: 50%;
+        box-shadow: 0 0 20px #ff77a9, 0 0 40px #ff77a9, 0 0 60px #ff77a9;
+        animation: pulse 1.5s infinite alternate, glow 2s ease-in-out infinite;
+    }
+
+    .infinity:before, .infinity:after {
+        content: '';
+        position: absolute;
+        width: 250px;
+        height: 150px;
+        border: 5px solid #ff77a9;
+        border-radius: 50%;
+        box-shadow: 0 0 15px #ff77a9, 0 0 30px #ff77a9, 0 0 45px #ff77a9;
+    }
+
+    /* Positioning the loops of the infinity symbol */
+    .infinity:before {
+        left: -130px;
+        top: 0;
+    }
+
+    .infinity:after {
+        left: 130px;
+        top: 0;
+    }
+
+    /* Centered "I love you" message */
+    .message {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2em;
+        color: #ff3366;
+        font-weight: bold;
+        animation: rainbowText 3s ease infinite;
+        background: linear-gradient(90deg, #ff6b6b, #ffcc70, #ff9a9e, #fbc2eb, #a18cd1);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    /* Rainbow text animation */
+    @keyframes rainbowText {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* Glow effect */
+    @keyframes glow {
+        0%, 100% {
+            box-shadow: 0 0 15px #ff77a9, 0 0 30px #ff77a9, 0 0 45px #ff77a9;
+        }
+        50% {
+            box-shadow: 0 0 30px #ff9a9e, 0 0 60px #ff9a9e, 0 0 90px #ff9a9e;
+        }
+    }
+
+    /* Pulsing effect for infinity */
+    @keyframes pulse {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.05);
+        }
+    }
+</style>
+</head>
+<body>
+    <!-- Infinity Symbol with "I love you" message -->
+    <div class="infinity">
+        <div class="message">I love you</div>
+    </div>
+</body>
+</html>
